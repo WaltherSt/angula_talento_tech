@@ -7,6 +7,8 @@ import { ImagenesComponent } from './page/imagenes/imagenes.component';
 import { InicioComponent } from './page/inicio/inicio.component';
 import { NombresComponent } from './page/nombres/nombres.component';
 import { PersonaComponent } from './page/persona/persona.component';
+import { ProductosComponent } from './page/productos/productos.component';
+import { UsersComponent } from './page/users/users.component';
 
 export const routes: Routes = [
   {
@@ -47,6 +49,16 @@ export const routes: Routes = [
         path: PATH.CONTACTO,
         title: 'contacto',
         component: ContactoComponent,
+      },
+      {
+        path: PATH.USERS,
+        title: 'Users',
+        component: UsersComponent,
+      },
+      {
+        path: PATH.PRODUCTO,
+        title: 'Productos',
+        component: ProductosComponent,
       },
     ],
   },
