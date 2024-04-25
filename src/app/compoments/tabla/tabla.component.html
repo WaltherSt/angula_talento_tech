@@ -1,0 +1,23 @@
+<h1>{{ titulo }}</h1>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      @for (property of columnTitles ; track $index) {
+      <th>{{ property | titlecase }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (p of data; track $index) {
+    <tr>
+      @for (property of columns; track $index) {
+
+      <td>{{ p[property] }}</td>
+
+      }
+    </tr>
+
+    }
+  </tbody>
+</table>
