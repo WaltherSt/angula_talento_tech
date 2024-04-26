@@ -1,5 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { TablaComponent } from '../../compoments/tabla/tabla.component';
 import { ProductoInterface } from '../../core/interface/producto.interface';
 
@@ -55,6 +56,14 @@ export class ProductosComponent implements OnInit {
 
   recibirInfomacion(data: any) {
     this.informacion = data;
-    console.log('componente padre de :', this.informacion);
+    Swal.fire({
+      title: 'Producto',
+      html: `<ul class="list-group">
+                <li class="list-group-item text-start">Nombre: </>${data.nombre}</li>
+                <li class="list-group-item text-start">Codigo: ${data.sku}</li>
+                <li class="list-group-item text-start">Cantidad: ${data.cantidad}</li>
+                <li class="list-group-item text-start">Precio: ${data.precio}</li>
+            </ul>`,
+    });
   }
 }
