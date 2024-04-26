@@ -1,6 +1,9 @@
+<span class="text-danger">SKU: {{ informacion?.sku }}</span>
+
 <app-tabla
   [data]="productos"
   [columns]="columns"
   [columnTitles]="columnTitles"
   title="Lista Productos"
+  (onInformacion)="recibirInfomacion($event)"
 />

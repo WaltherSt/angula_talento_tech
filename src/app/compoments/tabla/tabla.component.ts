@@ -1,5 +1,5 @@
 import { DatePipe, JsonPipe, TitleCasePipe } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tabla',
@@ -14,7 +14,14 @@ export class TablaComponent implements OnInit {
   @Input() columnTitles: string[] = [];
   @Input() titulo: string = '';
 
+  @Output() onInformacion: EventEmitter<any> = new EventEmitter<any>();
+
   ngOnInit(): void {
     console.log('personas en el componente hijo: ', this.data);
+  }
+
+  enviarInformacion(data: any) {
+    console.log('data componente hijo,', data);
+    this.onInformacion.emit(data);
   }
 }
