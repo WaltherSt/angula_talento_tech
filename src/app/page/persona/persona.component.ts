@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { TablaComponent } from '../../compoments/tabla/tabla.component';
 import { PersonaInterface } from '../../core/interface/persona.interface';
 
@@ -12,6 +13,7 @@ import { PersonaInterface } from '../../core/interface/persona.interface';
 export class PersonaComponent implements OnInit {
   personas: PersonaInterface[] = [];
   columns: string[] = [];
+  information: any;
 
   columnTitles: string[] = [
     'Nombre',
@@ -82,5 +84,21 @@ export class PersonaComponent implements OnInit {
     );
 
     this.columns = Object.keys(this.personas[0]);
+  }
+
+  recibirPersona(data: any) {
+    this.information = data;
+    Swal.fire({
+      title: 'Producto',
+      html: `<ul class="list-group">
+                <li class="list-group-item text-start">Nombre: ${data.nombre}</li>
+                <li class="list-group-item text-start">Correo: ${data.email}</li>
+                <li class="list-group-item text-start">Fecha de nacimiento: ${data.fechaNacimiento}</li>
+                <li class="list-group-item text-start">Peso: ${data.peso}</li>
+                <li class="list-group-item text-start">Celular: ${data.numeroCelular}</li>
+                <li class="list-group-item text-start">Documento: ${data.tipoDocumento}</li>
+                <li class="list-group-item text-start">Documento: ${data.numeroDocumento}</li>
+            </ul>`,
+    });
   }
 }
