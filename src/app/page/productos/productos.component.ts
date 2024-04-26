@@ -12,10 +12,9 @@ import { ProductoInterface } from '../../core/interface/producto.interface';
 })
 export class ProductosComponent implements OnInit {
   productos: ProductoInterface[] = [];
-
   columns: string[] = [];
-
   columnTitles: string[] = ['Nombre', 'Codigo', 'Cant', 'Valor'];
+  informacion: any;
 
   ngOnInit(): void {
     this.productos.push(
@@ -52,5 +51,10 @@ export class ProductosComponent implements OnInit {
     );
 
     this.columns = Object.keys(this.productos[0]);
+  }
+
+  recibirInfomacion(data: any) {
+    this.informacion = data;
+    console.log('componente padre de :', this.informacion);
   }
 }
