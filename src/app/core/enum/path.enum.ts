@@ -9,4 +9,5 @@ export enum PATH {
   PERSONA = 'persona',
   USERS = 'usuarios',
   PRODUCTO = 'Mis productos',
+  LISTATAREAS = 'tareas',
 }

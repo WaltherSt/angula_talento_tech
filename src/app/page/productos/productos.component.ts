@@ -1,7 +1,8 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { TablaComponent } from '../../compoments/tabla/tabla.component';
+
+import { TablaComponent } from '../../compoment/tabla/tabla.component';
 import { ProductoInterface } from '../../core/interface/producto.interface';
 
 @Component({

@@ -1,0 +1,22 @@
+<form class="w-50 p-5">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Titulo</label>
+    <input type="text" class="form-control" name="title" [(ngModel)]="title" />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Descripción</label>
+    <input
+      type="text"
+      class="form-control"
+      name="description"
+      [(ngModel)]="description"
+    />
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary w-100"
+    (click)="recibirInformacion()"
+  >
+    Enviar
+  </button>
+</form>

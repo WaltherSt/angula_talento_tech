@@ -40,6 +40,13 @@ export const MenuRoutes: MenuInfoInterface[] = [
     submenu: [],
   },
   {
+    path: PATH.LISTATAREAS,
+    title: 'Lista',
+    icon: '',
+    classCss: '',
+    submenu: [],
+  },
+  {
     path: PATH.NOMBRE,
     title: 'Nombre',
     icon: '',

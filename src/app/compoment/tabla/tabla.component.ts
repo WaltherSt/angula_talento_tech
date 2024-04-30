@@ -21,7 +21,6 @@ export class TablaComponent implements OnInit {
   }
 
   enviarInformacion(data: any) {
-    console.log('data componente hijo,', data);
     this.onInformacion.emit(data);
   }
 }
