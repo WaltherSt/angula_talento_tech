@@ -5,6 +5,7 @@ import { ArticuloComponent } from './page/articulo/articulo.component';
 import { ContactoComponent } from './page/contacto/contacto.component';
 import { ImagenesComponent } from './page/imagenes/imagenes.component';
 import { InicioComponent } from './page/inicio/inicio.component';
+import { ListaTareasComponent } from './page/lista-tareas/lista-tareas.component';
 import { NombresComponent } from './page/nombres/nombres.component';
 import { PersonaComponent } from './page/persona/persona.component';
 import { ProductosComponent } from './page/productos/productos.component';
@@ -24,6 +25,11 @@ export const routes: Routes = [
         path: PATH.PERSONA,
         title: 'personas',
         component: PersonaComponent,
+      },
+      {
+        path: PATH.LISTATAREAS,
+        title: 'tareas',
+        component: ListaTareasComponent,
       },
       {
         path: PATH.IMAGEN,

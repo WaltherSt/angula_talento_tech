@@ -1,0 +1,16 @@
+@if (showForm) {
+<app-formulario (onInformacion)="addTaks($event)" />
+} @if (!showForm) {
+
+<div class="d-flex justify-content-end">
+  <button class="btn btn-primary" (click)="showFormFuntion()">+ Tareas</button>
+</div>
+
+<app-tabla
+  [columns]="columns"
+  [columnTitles]="columnTitles"
+  [data]="taksList"
+  title="Lista de tareas"
+/>
+
+}

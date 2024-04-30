@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { TablaComponent } from '../../compoments/tabla/tabla.component';
+
+import { TablaComponent } from '../../compoment/tabla/tabla.component';
 import { PersonaInterface } from '../../core/interface/persona.interface';
 
 @Component({
